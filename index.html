@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+          integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <title>Distinct Array</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+<div class="jumbotron jumbotron-fluid pt-1 pb-1 mb-1 bg-dark text-white">
+    <div class="container">
+        <h1 class="display-5 mb-0">Distinct Array Algorithms</h1>
+        <p class="lead mt-0">It returns an array which only has the unique values .......</p>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- form -->
+    <form id="arraySizeForm" class="mt-2">
+
+        <div class="row">
+
+            <!-- element range length -->
+            <div class="col">
+                <label for="elementRange">Element length</label>
+                <input type="range" value="1" class="custom-range" min="1" max="4" id="elementRange">
+            </div>
+
+            <!-- array length input -->
+            <div class="col">
+                <div class="form-group">
+                    <label for="size">Array length</label>
+                    <input type="number" value="1000" class="form-control" placeholder="Array length" id="size">
+                </div>
+            </div>
+
+            <!-- submit -->
+            <div class="col">
+                <button class="btn btn-primary btn-lg btn-block ripple"
+                        type="submit" id="generateButton">
+                    <span>GENERATE ARRAY</span>
+                    <br/>
+                    <small>then add point to chart</small>
+                </button>
+            </div>
+
+        </div>
+
+    </form>
+
+    <div id="loading" class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+             aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+    </div>
+
+    <div class="row arraysDv mt-3 mr-1 pt-2 ml-1 mb-2">
+
+        <!-- The generated array -->
+        <div class="col-sm-4">
+            <h6>Array <span id="aSize"></span></h6>
+            <div id="arrayGenerated" class="arrayDiv"></div>
+            <!-- results -->
+            <div class="col-lg-12">
+                <h6 class="mt-4" id="resultsP"></h6>
+            </div>
+        </div>
+
+
+        <!-- Algorithm 1 -->
+        <div class="col-sm-4 ">
+            <h6>
+                <a target="_blank" href="distinct1.js">Algorithm 1</a>
+                <span id="a1Size"></span>
+            </h6>
+            <div class="arrayDiv" id="alg1Res"></div>
+            <p class="mt-3" id="numEq1"></p>
+        </div>
+
+        <!-- Algorithm 2 -->
+        <div class="col-sm-4 ">
+            <h6>
+                <a class="redAnchor" target="_blank" href="distinct2.js">Algorithm 2</a>
+                <span id="a2Size"></span>
+            </h6>
+            <div class="arrayDiv" id="alg2Res"></div>
+            <p class="mt-3" id="numEq2"></p>
+        </div>
+
+
+    </div>
+
+    <!-- chart -->
+    <div id="chartContainer" style="height: 350px; width: 100%;"></div>
+
+</div><!-- /container -->
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+        integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+<script src="distinct1.js"></script>
+<script src="distinct2.js"></script>
+<script src="chart.js"></script>
+<script src="App.js"></script>
+</body>
+</html>
